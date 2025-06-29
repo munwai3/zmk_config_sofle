@@ -25,64 +25,23 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp GRAVE  &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                            &kp N6  &kp N7  &kp N8     &kp N9           &kp N0    &kp MINUS
-&kp TAB    &kp Q   &kp W     &kp E     &kp R      &kp T                             &kp Y   &kp U   &kp I      &kp O            &kp P     &kp BACKSPACE
-&kp CLCK   &kp A   &kp S     &kp D     &kp F      &kp G                             &kp H   &kp J   &kp K      &kp L            &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z   &kp X     &kp C     &kp V      &kp B   &kp C_MUTE    &kp C_MUTE  &kp N   &kp M   &kp COMMA  &kp DOT          &kp FSLH  &kp RSHFT
-                   &kp LGUI  &kp LALT  &kp LCTRL  &mo 1   &kp RET       &kp SPACE   &to 1   &to 2   &to 3      &kp PRINTSCREEN
-            >;
-        };
-
-        Symbols {
-            display-name = "Layer 1";
-
-            // TODO: Some binds are waiting for shifted keycode support.
-            // ------------------------------------------------------------------------------------------------------------
-            // | `     |  F1 |  F2 |  F3  |  F4  |  F5  |                   |  F6  |  F7   |  F8   |  F9  |  F10  |  F11  |
-            // | RAISE |   1 |   2 |   3  |   4  |   5  |                   |   6  |   7   |   8   |   9  |    0  |  F12  |
-            // |       |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   |   |
-            // |       |  =  |  -  |  +   |  {   |  }   |        |  |       |  [   |  ]    |  ;    |  :   |   \   |       |
-            //               |     |      |      |      |        |  |       |      |       |       |      |
-
-            bindings = <
-&kp TILDE  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT                    &kp CARET    &kp AMPERSAND  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PLUS
-&trans     &trans           &trans       &trans    &trans      &trans                         &kp PAGE_UP  &kp PAGE_DOWN  &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp PIPE               &trans
-&trans     &trans           &trans       &trans    &trans      &trans                         &kp LEFT     &kp DOWN       &kp UP            &kp RIGHT             &kp COLON              &kp DOUBLE_QUOTES
-&trans     &trans           &trans       &trans    &trans      &trans       &trans    &trans  &kp INSERT   &kp DELETE     &kp LESS_THAN     &kp GREATER_THAN      &kp QUESTION           &trans
-                            &trans       &trans    &trans      &trans       &trans    &trans  &to 0        &to 0          &tog 0            &trans
+&kp GRAVE  &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                       &kp N6     &kp N7     &kp N8     &kp N9           &kp N0    &kp BACKSPACE
+&kp TAB    &kp Q   &kp W     &kp E     &kp R      &kp T                        &kp Y      &kp U      &kp I      &kp O            &kp P     &kp LEFT_BRACKET
+&kp LCTRL  &kp A   &kp S     &kp D     &kp F      &kp G                        &kp H      &kp J      &kp K      &kp L            &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z   &kp X     &kp C     &kp V      &kp B   &trans     &trans    &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH  &kp RIGHT_BRACKET
+                   &kp LGUI  &kp LALT  &kp SPACE  &mo 1   &kp RET    &kp BSLH  &kp MINUS  &kp EQUAL  &to 1      &kp PRINTSCREEN
             >;
         };
 
         FunctionKeys {
             display-name = "Layer 2";
             bindings = <
-&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                    &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans   &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &to 0   &to 0   &to 0   &trans
+&kp ESC     &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                          &kp F6          &kp F7          &kp F8           &kp F9  &kp F10  &kp CAPS
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans          &kp UP_ARROW    &trans           &trans  &trans   &trans
+&trans      &trans        &trans        &trans        &trans        &trans                          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans   &trans
+&trans      &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans          &trans          &trans           &trans  &trans   &trans
+                          &trans        &trans        &trans        &trans        &trans    &trans  &trans          &trans          &to 0            &trans
             >;
-        };
-
-        Admin {
-            display-name = "Layer 3";
-
-            // ------------------------------------------------------------------------------------------------------------
-            // |BTCLR| BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      |      |       |      |       |       |
-            // |     | INS  | PSCR | GUI   |       |      |                | PGUP |      |       |      |       |       |
-            // |     | ALT  | CTRL | SHIFT |       | CAPS |                |  <-  |   v  |   ^   |  ->  |  DEL  | BKSPC |
-            // |     | UNDO | CUT  | COPY  | PASTE |      |      |  |      |      |      |       |      |       |       |
-            //              |      |       |       |      |      |  |      |      |      |       |      |
-
-            bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &trans        &trans        &trans        &trans        &trans                          &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &trans        &trans        &trans        &trans        &trans                          &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &trans        &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                          &trans        &trans        &trans        &trans        &trans    &trans  &to 0   &to 0   &to 0   &trans
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
     };
 };
